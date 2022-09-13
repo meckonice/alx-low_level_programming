@@ -7,16 +7,15 @@
  */
 int main(void)
 {
-	char string[8] = "_putchar";
-	int n = 0;
+	char a[] = "_putchar";
+	int b;
 
-	while (n < 8)
+	for (b = 0; b < 8; b++)
 	{
-		_putchar(string[n]);
-		++n
+		_putchar(a[b]);
 	}
 
-	_putchar(10);
+	_putchar("\n");
 	return (0);
 
 
