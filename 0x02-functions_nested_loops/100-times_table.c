@@ -1,61 +1,51 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_result_less_than_10 - Prints the results that are less than 10
- * @result: The number to be printed
+ * print_times_table - function
  *
- * Return: (void)
- */
-void print_result_less_than_10(int result)
-{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(result + '0');
-}
-/**
- * print_times_table - print an nxn time table
- * @n: The seed number
+ * @n: parameter
  *
- * Return: void
+ * Return: end program
  */
 void print_times_table(int n)
 {
-	int i;
-	int j;
-	int result;
+	int a, m, p;
+	int c = 1;
 
-	if (n < 0 && n > 15)
-		return;
 	if (n >= 0 && n <= 15)
 	{
-		for (i = 0; i <= n; i++)
+		for (m = 0; m <= n; m++)
 		{
-			for (j = 0; j <= n; j++)
+			for (a = 0; a <= n; a++)
 			{
-				result = i * j;
-				if (j == 0)
-					_putchar(result + '0');
-				else if (result < 10)
-					print_result_less_than_10(result);
-				else if (result >= 10 && result < 100)
+				p = m * a;
+				if (c == 0 && p < 10)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((result / 10) + '0');
-					_putchar((result % 10) + '0');
+					printf(",   %d", p);
 				}
-				else if (result >= 100)
-				{	_putchar(',');
-					_putchar(' ');
-					_putchar((result / 100) + '0');
-					_putchar(((result / 10) % 10) + '0');
-					_putchar((result % 10) + '0');
+				else if (c == 0 && p < 100)
+				{
+					printf(",  %d", p);
 				}
+				else if (c == 0 && p < 1000)
+				{
+					printf(", %d", p);
+				}
+				else if (c == 0 && p >= 1000)
+				{
+					printf(",%d", p);
+				}
+				else
+				{
+					printf("%d", p);
+				}
+				c = 0;
 			}
-			_putchar('\n');
+			putchar(10);
+			c = 1;
 		}
+	}
+	else
+	{
 	}
 }
