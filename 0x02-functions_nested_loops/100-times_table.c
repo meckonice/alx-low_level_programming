@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_result_less_than_10 - Prints the results that are less than 10
  * @result: The number to be printed
