@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
- * isalpha - check for alphabets
+ * _isalpha - check for alphabets
  *
  * @c: The letter to be checked
  *
