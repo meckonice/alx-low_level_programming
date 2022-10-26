@@ -25,13 +25,13 @@ size_t print_listint_safe(const listint_t *head)
 		count++;
 
 		printf("[%p] %d\n", (void *)tmp2, tmp2->n);
-		
+
 		if (tmp2 <= tmp)
 		{
 			printf("-> [%p] %d\n", (void *)tmp, tmp->n);
 			break;
 		}
 	}
-	
+
 	return (count);
 }
